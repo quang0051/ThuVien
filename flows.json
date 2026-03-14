@@ -1533,10 +1533,20 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 820,
+        "x": 840,
         "y": 140,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "440ee5c056885088",
+        "type": "comment",
+        "z": "tab_kho_sach_vip",
+        "name": "Test Đồng bộ",
+        "info": "",
+        "x": 830,
+        "y": 200,
+        "wires": []
     }
 ]
