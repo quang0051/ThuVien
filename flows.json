@@ -1545,8 +1545,8 @@
         "z": "tab_kho_sach_vip",
         "name": "Test Đồng bộ",
         "info": "",
-        "x": 830,
-        "y": 200,
+        "x": 810,
+        "y": 220,
         "wires": []
     }
 ]
