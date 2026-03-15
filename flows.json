@@ -1,33 +1,11 @@
 [
     {
-        "id": "6f78dfd1a9f2f42d",
-        "type": "tab",
-        "label": "Đồng hộ nhiệt và sơ đồ",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "11d683029368b71c",
         "type": "tab",
         "label": "Login Form",
         "disabled": true,
         "info": "",
         "env": []
-    },
-    {
-        "id": "tab_thuvien",
-        "type": "tab",
-        "label": "Thư viện Tổng hợp",
-        "disabled": true,
-        "info": ""
-    },
-    {
-        "id": "549269ebd1168ef6",
-        "type": "tab",
-        "label": "Thư Viện Thông Minh (Final)",
-        "disabled": true,
-        "info": ""
     },
     {
         "id": "tab_kho_sach_vip",
@@ -155,7 +133,8 @@
                 "default": "#097479",
                 "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
@@ -498,145 +477,75 @@
         "width": "6"
     },
     {
-        "id": "86a652e25ac883b0",
-        "type": "mqtt in",
-        "z": "6f78dfd1a9f2f42d",
-        "name": "",
-        "topic": "test/nhietdo",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "92c13018d1cb027c",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 550,
-        "y": 360,
-        "wires": [
-            [
-                "7898037b414aae61",
-                "71487cd9b90dc37d"
-            ]
-        ]
-    },
-    {
-        "id": "7898037b414aae61",
-        "type": "ui_gauge",
-        "z": "6f78dfd1a9f2f42d",
-        "name": "",
-        "group": "980e918b489c012e",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "gauge",
-        "label": "units",
-        "format": "{{value}}",
-        "min": "10",
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 730,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "4307573a838842d8",
-        "type": "inject",
-        "z": "6f78dfd1a9f2f42d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "80",
-        "payloadType": "num",
-        "x": 550,
-        "y": 280,
-        "wires": [
-            [
-                "01baa769130bb83d"
-            ]
-        ]
-    },
-    {
-        "id": "01baa769130bb83d",
-        "type": "mqtt out",
-        "z": "6f78dfd1a9f2f42d",
-        "name": "",
-        "topic": "test/nhietdo",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "92c13018d1cb027c",
-        "x": 750,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "71487cd9b90dc37d",
-        "type": "ui_chart",
-        "z": "6f78dfd1a9f2f42d",
-        "name": "",
-        "group": "980e918b489c012e",
+        "id": "tab_hanoios_demo",
+        "type": "ui_tab",
+        "name": "Dashboard Hiện Đại",
+        "icon": "dashboard",
         "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "5",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 730,
-        "y": 420,
-        "wires": [
-            []
-        ]
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_left_main",
+        "type": "ui_group",
+        "name": "Chỉ số chính (Cột Trái)",
+        "tab": "tab_hanoios_demo",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "group_right_env",
+        "type": "ui_group",
+        "name": "Môi trường (Cột Phải)",
+        "tab": "tab_hanoios_demo",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "tab_library_vip_new",
+        "type": "ui_tab",
+        "name": "Kho Sách VIP (Bản Đẹp)",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_lib_left",
+        "type": "ui_group",
+        "name": "Khu Vực Hiển Thị (Cột Trái)",
+        "tab": "tab_library_vip_new",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "group_lib_right",
+        "type": "ui_group",
+        "name": "Khu Vực Điều Khiển (Cột Phải)",
+        "tab": "tab_library_vip_new",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "851217ef0f875353",
+        "type": "ui_group",
+        "name": "Khu Vực Ảnh (Cột 3)",
+        "tab": "tab_library_vip_new",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "5660b46ab5b6d219",
@@ -814,534 +723,15 @@
         ]
     },
     {
-        "id": "mqtt_in_khay",
-        "type": "mqtt in",
-        "z": "tab_thuvien",
-        "name": "Nhận Dữ liệu Khay Sách",
-        "topic": "library/ground_floor/return_drop_01/status",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "mqtt_broker_1",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 160,
-        "y": 140,
-        "wires": [
-            [
-                "change_khay"
-            ]
-        ]
-    },
-    {
-        "id": "change_khay",
-        "type": "change",
-        "z": "tab_thuvien",
-        "name": "Lọc lấy % Khay đầy",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.fill_level_percent",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 390,
-        "y": 140,
-        "wires": [
-            [
-                "gauge_khay",
-                "chart_khay"
-            ]
-        ]
-    },
-    {
-        "id": "gauge_khay",
-        "type": "ui_gauge",
-        "z": "tab_thuvien",
-        "name": "Đồng hồ Khay trả sách",
-        "group": "ui_group_khay",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Mức độ đầy của khay (%)",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 620,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "chart_khay",
-        "type": "ui_chart",
-        "z": "tab_thuvien",
-        "name": "Biểu đồ Mức độ",
-        "group": "ui_group_khay",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "label": "Lịch sử Khay trả sách",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 600,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui_form_kiosk",
-        "type": "ui_form",
-        "z": "tab_thuvien",
-        "name": "Form Mượn Sách",
-        "label": "",
-        "group": "ui_group_kiosk",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Tên hoặc Mã SV",
-                "value": "ma_sv",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Số lượng mượn",
-                "value": "so_luong",
-                "type": "number",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "ma_sv": "",
-            "so_luong": ""
-        },
-        "payload": "",
-        "submit": "Mượn Sách",
-        "cancel": "Hủy",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": false,
-        "className": "",
-        "x": 140,
-        "y": 280,
-        "wires": [
-            [
-                "mqtt_out_kiosk"
-            ]
-        ]
-    },
-    {
-        "id": "mqtt_out_kiosk",
-        "type": "mqtt out",
-        "z": "tab_thuvien",
-        "name": "Gửi Yêu Cầu Mượn",
-        "topic": "library/kiosk/request",
-        "qos": "0",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "mqtt_broker_1",
-        "x": 370,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "mqtt_in_kho",
-        "type": "mqtt in",
-        "z": "tab_thuvien",
-        "name": "Nhận Số Sách",
-        "topic": "library/inventory/count",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "mqtt_broker_1",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 360,
-        "wires": [
-            [
-                "gauge_kho",
-                "e5330f55a9fea8de"
-            ]
-        ]
-    },
-    {
-        "id": "gauge_kho",
-        "type": "ui_gauge",
-        "z": "tab_thuvien",
-        "name": "Kho sách (Cuốn)",
-        "group": "ui_group_kiosk",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Kho sách hiện tại (Cuốn)",
-        "label": "Cuốn",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "200",
-        "seg2": "600",
-        "x": 340,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "mqtt_in_log",
-        "type": "mqtt in",
-        "z": "tab_thuvien",
-        "name": "Nhận Lịch Sử Kiosk",
-        "topic": "library/kiosk/log",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "mqtt_broker_1",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 440,
-        "wires": [
-            [
-                "text_log"
-            ]
-        ]
-    },
-    {
-        "id": "text_log",
-        "type": "ui_text",
-        "z": "tab_thuvien",
-        "group": "ui_group_kiosk",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "Trạng thái Kiosk",
-        "label": "Lịch sử Trạm Kiosk:",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 360,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "e5330f55a9fea8de",
-        "type": "debug",
-        "z": "tab_thuvien",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "9425d9d6d641afb7",
-        "type": "ui_form",
-        "z": "549269ebd1168ef6",
-        "name": "Form Giao Dịch",
-        "label": "",
-        "group": "b52772754d89dba2",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Tên hoặc Mã SV",
-                "value": "ma_sv",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Số lượng",
-                "value": "so_luong",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Hành động",
-                "value": "action",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "ma_sv": "",
-            "so_luong": "",
-            "action": ""
-        },
-        "payload": "",
-        "submit": "Thực hiện",
-        "cancel": "Hủy",
-        "topic": "library/kiosk/request",
-        "topicType": "str",
-        "splitLayout": false,
-        "className": "",
-        "x": 140,
-        "y": 140,
-        "wires": [
-            [
-                "5cfe2bbb05a7f7e2"
-            ]
-        ]
-    },
-    {
-        "id": "5cfe2bbb05a7f7e2",
-        "type": "mqtt out",
-        "z": "549269ebd1168ef6",
-        "name": "Gửi Yêu Cầu",
-        "topic": "library/kiosk/request",
-        "qos": "0",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "92c13018d1cb027c",
-        "x": 350,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "031e2fc804d3a171",
-        "type": "mqtt in",
-        "z": "549269ebd1168ef6",
-        "name": "Nhận Kho Sách",
-        "topic": "library/inventory/count",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "92c13018d1cb027c",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 140,
-        "y": 220,
-        "wires": [
-            [
-                "3503aeb270e4ee0c"
-            ]
-        ]
-    },
-    {
-        "id": "3503aeb270e4ee0c",
-        "type": "ui_gauge",
-        "z": "549269ebd1168ef6",
-        "name": "Đồng hồ Kho",
-        "group": "b52772754d89dba2",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Kho sách hiện tại (Cuốn)",
-        "label": "Cuốn",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 350,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "01128ab8c26fa94a",
-        "type": "mqtt in",
-        "z": "549269ebd1168ef6",
-        "name": "Nhận Lịch Sử",
-        "topic": "library/kiosk/log",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "92c13018d1cb027c",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 130,
-        "y": 300,
-        "wires": [
-            [
-                "d05393739e672a8f"
-            ]
-        ]
-    },
-    {
-        "id": "d05393739e672a8f",
-        "type": "ui_text",
-        "z": "549269ebd1168ef6",
-        "group": "b52772754d89dba2",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "Bảng Thông Báo",
-        "label": "Trạng thái:",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 360,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "41fb54475863855e",
-        "type": "mqtt in",
-        "z": "549269ebd1168ef6",
-        "name": "Nhận Khay Trả",
-        "topic": "library/ground_floor/return_drop_01/status",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "92c13018d1cb027c",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 140,
-        "y": 380,
-        "wires": [
-            [
-                "5c35f39b7f6bb463"
-            ]
-        ]
-    },
-    {
-        "id": "5c35f39b7f6bb463",
-        "type": "change",
-        "z": "549269ebd1168ef6",
-        "name": "Lọc JSON",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.fill_level_percent",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 380,
-        "wires": [
-            [
-                "e814f5ef95b88e00"
-            ]
-        ]
-    },
-    {
-        "id": "e814f5ef95b88e00",
-        "type": "ui_gauge",
-        "z": "549269ebd1168ef6",
-        "name": "Đồng hồ Khay",
-        "group": "174763bbd25b687f",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Mức độ đầy của khay (%)",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 540,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "template_form",
         "type": "ui_template",
         "z": "tab_kho_sach_vip",
-        "group": "group_form_vip",
+        "group": "group_lib_right",
         "name": "Form Có Menu Dropdown",
         "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<div style=\"padding: 10px; display: flex; flex-direction: column; gap: 15px;\" ng-init=\"my_sv=''; my_sl=1; my_act='borrow'\">\n    <div>\n        <label style=\"font-weight:bold; color:#333;\">Tên / Mã SV</label><br>\n        <input type=\"text\" ng-model=\"my_sv\" placeholder=\"Nhập tên...\" style=\"width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:5px; font-size:16px;\">\n    </div>\n    <div>\n        <label style=\"font-weight:bold; color:#333;\">Số lượng</label><br>\n        <input type=\"number\" ng-model=\"my_sl\" style=\"width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:5px; font-size:16px;\">\n    </div>\n    <div>\n        <label style=\"font-weight:bold; color:#333;\">Hành động</label><br>\n        <select ng-model=\"my_act\" style=\"width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:5px; font-size:16px;\">\n            <option value=\"borrow\">📗 Mượn sách</option>\n            <option value=\"return\">📘 Trả sách</option>\n            <option value=\"sleep\">💤 Đi ngủ</option>\n            <option value=\"eat\">🍜 Ăn cơm</option>\n            <option value=\"secret\">🎁 120 yên lãng</option>\n        </select>\n    </div>\n    <button ng-click=\"send({payload: {ma_sv: my_sv, so_luong: my_sl, action: my_act}})\" style=\"padding:12px; background-color:#009688; color:white; border:none; border-radius:4px; cursor:pointer; font-weight:bold; font-size:16px;\">\n        THỰC HIỆN\n    </button>\n</div>",
+        "width": "10",
+        "height": "8",
+        "format": "<div style=\"padding: 10px; display: flex; flex-direction: column; gap: 15px;\" ng-init=\"my_sv=''; my_sl=1; my_act='borrow'\">\n    <div>\n        <label style=\"font-weight:bold; color:#333;\">Tên / Mã SV</label><br>\n        <input type=\"text\" ng-model=\"my_sv\" placeholder=\"Nhập tên...\" style=\"width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:5px; font-size:16px;\">\n    </div>\n    <div>\n        <label style=\"font-weight:bold; color:#333;\">Số lượng</label><br>\n        <input type=\"number\" ng-model=\"my_sl\" style=\"width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:5px; font-size:16px;\">\n    </div>\n    <div>\n        <label style=\"font-weight:bold; color:#333;\">Hành động</label><br>\n        <select ng-model=\"my_act\" style=\"width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:5px; font-size:16px;\">\n            <option value=\"borrow\">📗 Mượn sách</option>\n            <option value=\"return\">📘 Trả sách</option>\n            <option value=\"sleep\">💤 Đi ngủ</option>\n            <option value=\"eat\">🍜 Ăn cơm</option>\n            <option value=\"secret\"> Địa điểm bí ẩn?</option>\n        </select>\n    </div>\n    <button ng-click=\"send({payload: {ma_sv: my_sv, so_luong: my_sl, action: my_act}})\" style=\"padding:12px; background-color:#009688; color:white; border:none; border-radius:4px; cursor:pointer; font-weight:bold; font-size:16px;\">\n        THỰC HIỆN\n    </button>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -1399,10 +789,10 @@
         "type": "ui_gauge",
         "z": "tab_kho_sach_vip",
         "name": "Đồng hồ Kho",
-        "group": "group_dash_vip",
+        "group": "group_lib_left",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "10",
+        "height": "5",
         "gtype": "gage",
         "title": "Kho sách (Cuốn)",
         "label": "Cuốn",
@@ -1414,6 +804,10 @@
             "#e6e600",
             "#00b500"
         ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
         "x": 390,
         "y": 200,
         "wires": []
@@ -1423,10 +817,10 @@
         "type": "ui_chart",
         "z": "tab_kho_sach_vip",
         "name": "Biểu đồ Kho",
-        "group": "group_dash_vip",
+        "group": "group_lib_left",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": "10",
+        "height": "5",
         "label": "Lịch sử biến động Kho",
         "chartType": "line",
         "legend": "false",
@@ -1486,14 +880,19 @@
         "id": "text_log_vip",
         "type": "ui_text",
         "z": "tab_kho_sach_vip",
-        "group": "group_form_vip",
-        "order": 2,
-        "width": 0,
-        "height": 0,
+        "group": "851217ef0f875353",
+        "order": 1,
+        "width": "10",
+        "height": "2",
         "name": "Bảng Thông Báo",
         "label": "Log:",
         "format": "{{msg.payload}}",
         "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 390,
         "y": 360,
         "wires": []
@@ -1522,11 +921,11 @@
         "id": "template_inline_img",
         "type": "ui_template",
         "z": "tab_kho_sach_vip",
-        "group": "group_form_vip",
+        "group": "851217ef0f875353",
         "name": "Khung Hiển Thị Ảnh",
-        "order": 3,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": "10",
+        "height": "6",
         "format": "<div style=\"text-align: center; width: 100%;\">\n    <img id=\"secret-img\" src=\"\" style=\"width: 100%; max-height: 450px; object-fit: contain; border-radius: 10px; display: none; box-shadow: 0 8px 16px rgba(0,0,0,0.4);\">\n</div>\n<script>\n    (function(scope) {\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.payload) {\n                var img = document.getElementById('secret-img');\n                if (msg.payload === 'clear') {\n                    img.style.display = 'none';\n                } else {\n                    img.src = msg.payload;\n                    img.style.display = 'block';\n                }\n            }\n        });\n    })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -1548,5 +947,26 @@
         "x": 810,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "css_magic_library",
+        "type": "ui_template",
+        "z": "tab_kho_sach_vip",
+        "group": "group_lib_left",
+        "name": "CSS Bo Góc Thư Viện",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<style>\nbody, .nr-dashboard-theme md-content {\n    background-color: #f4f7f9 !important;\n}\nmd-card {\n    border-radius: 16px !important;\n    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;\n    background-color: #ffffff !important;\n    border: none !important;\n    margin: 8px !important;\n}\n.nr-dashboard-theme md-toolbar {\n    background-color: #ffffff !important;\n    color: #333 !important;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 660,
+        "y": 300,
+        "wires": [
+            []
+        ]
     }
 ]

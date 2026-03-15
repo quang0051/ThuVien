@@ -43,9 +43,9 @@ def on_message(client, userdata, msg):
 
         # --- HỘP QUÀ BÍ MẬT ---
         elif hanh_dong == "secret":
-            msg_log = f"[{get_time()}] 🎁 Alo Vũ phải ko em"
+            msg_log = f"[{get_time()}] Nơi đó"
             # Gắn link ảnh GIF con mèo (Bạn có thể tự đổi link ảnh khác nếu muốn)
-            link_anh = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRs-zM0F-5XqTjBMioKEHw5rCQQ15GT7vfKw&s"
+            link_anh = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkWbmMBFKwVI6Rw67W0MeP1_SzZyyZs4aYpw&s"
 
             # --- LOGIC MƯỢN SÁCH ---
         elif hanh_dong == "borrow":
